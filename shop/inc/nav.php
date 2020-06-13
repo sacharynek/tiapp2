@@ -31,7 +31,8 @@
 					</li>
 				</ul>
 				<div class="header-xtra">
-				<?php $cart = $_SESSION['cart']; ?>
+				<?php $cart = $_SESSION['cart'];
+				?>
 					<div class="s-cart">
 						<div class="sc-ico"><i class="fa fa-shopping-cart"></i><em><?php
 								echo count($cart); ?></em></div>
