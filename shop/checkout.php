@@ -141,25 +141,9 @@ $r = mysqli_fetch_assoc($res);
 							<label class="">Country </label>
 							<select name="country" class="form-control">
 								<option value="">Select Country</option>
-								<option value="AX">Aland Islands</option>
-								<option value="AF">Afghanistan</option>
-								<option value="AL">Albania</option>
-								<option value="DZ">Algeria</option>
-								<option value="AD">Andorra</option>
-								<option value="AO">Angola</option>
-								<option value="AI">Anguilla</option>
-								<option value="AQ">Antarctica</option>
-								<option value="AG">Antigua and Barbuda</option>
-								<option value="AR">Argentina</option>
-								<option value="AM">Armenia</option>
-								<option value="AW">Aruba</option>
-								<option value="AU">Australia</option>
-								<option value="AT">Austria</option>
-								<option value="AZ">Azerbaijan</option>
-								<option value="BS">Bahamas</option>
-								<option value="BH">Bahrain</option>
-								<option value="BD">Bangladesh</option>
-								<option value="BB">Barbados</option>
+								<option value="PL">Poland</option>
+								<option value="EU">Other (withing EU)</option>
+
 							</select>
 							<div class="clearfix space20"></div>
 							<div class="row">

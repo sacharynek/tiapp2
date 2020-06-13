@@ -38,25 +38,31 @@
 
 						<div class="cart-info">
 							<small>You have <em class="highlight"><?php
-								echo count($cart); ?> item(s)</em> in your shopping bag</small>
+                                    if(!is_null($cart)){
+								echo count($cart); }
+                                    else {
+                                        echo '0';
+                                    }
+                                    ?> item(s)</em> in your shopping bag</small>
 							<br>
 							<br>
 							<?php
 								//print_r($cart);
 								$total = 0;
+                            if(!is_null($cart)){
 								foreach ($cart as $key => $value) {
 									//echo $key . " : " . $value['quantity'] ."<br>";
 									$navcartsql = "SELECT * FROM products WHERE id=$key";
 									$navcartres = mysqli_query($connection, $navcartsql);
 									$navcartr = mysqli_fetch_assoc($navcartres);
 
-								
+                                }
 							 ?>
 							<div class="ci-item">
 								<img src="admin/<?php echo $navcartr['thumb']; ?>" width="70" alt=""/>
 								<div class="ci-item-info">
 									<h5><a href="single.php?id=<?php echo $navcartr['id']; ?>"><?php echo substr($navcartr['name'], 0 , 20); ?></a></h5>
-									<p><?php echo $value['quantity']; ?> x INR <?php echo $navcartr['price']; ?>.00/-</p>
+									<p><?php echo $value['quantity']; ?> x Dollar <?php echo $navcartr['price']; ?>.00/-</p>
 									<div class="ci-edit">
 										<!-- <a href="#" class="edit fa fa-edit"></a> -->
 										<a href="delcart.php?id=<?php echo $key; ?>" class="edit fa fa-trash"></a>
@@ -66,7 +72,7 @@
 							<?php 
 							$total = $total + ($navcartr['price']*$value['quantity']);
 							} ?>
-							<div class="ci-total">Subtotal: INR <?php echo $total; ?>.00/-</div>
+							<div class="ci-total">Subtotal: Dollar <?php echo $total; ?>.00/-</div>
 							<div class="cart-btn">
 								<a href="cart.php">View Bag</a>
 								<a href="checkout.php">Checkout</a>

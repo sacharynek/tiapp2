@@ -59,13 +59,13 @@ $cart = $_SESSION['cart'];
 							<?php echo $orditmr['pquantity']; ?>
 						</td>
 						<td>
-							INR <?php echo $orditmr['productprice']; ?>/-
+							Dollar <?php echo $orditmr['productprice']; ?>/-
 						</td>
 						<td>
 							
 						</td>
 						<td>
-							INR <?php echo $orditmr['productprice']*$orditmr['pquantity']; ?>/-
+							Dollar <?php echo $orditmr['productprice']*$orditmr['pquantity']; ?>/-
 						</td>
 					</tr>
 				<?php } ?>

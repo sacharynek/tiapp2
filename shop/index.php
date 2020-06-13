@@ -47,7 +47,7 @@ include 'inc/header.php'; ?>
                                             <span class="fa fa-star act"></span>
                                         </div>
                                         <h2 class="product-title"><a href="single.php?id=<?php echo $r['id']; ?>"><?php echo $r['name']; ?></a></h2>
-                                        <div class="product-price">INR <?php echo $r['price']; ?>.00/-<span></span></div>
+                                        <div class="product-price">Dollar <?php echo $r['price']; ?>.00/-<span></span></div>
                                     </div>
                                 </div>
                             <?php } ?>
